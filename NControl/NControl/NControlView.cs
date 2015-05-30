@@ -123,6 +123,8 @@ namespace NControl.Abstractions
             }
         }
 
+        public double IdioticMobileScaleFactor { get; set; }
+
 		#endregion
 
         #region Drawing

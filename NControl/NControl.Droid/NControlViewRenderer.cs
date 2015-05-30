@@ -59,8 +59,11 @@ namespace NControl.Droid
             if (e.OldElement != null)
                 e.OldElement.OnInvalidate -= HandleInvalidate;
 
-            if (e.NewElement != null)
+            if(e.NewElement != null)
+            {
                 e.NewElement.OnInvalidate += HandleInvalidate;
+                e.NewElement.IdioticMobileScaleFactor = Forms.Context.Resources.DisplayMetrics.Density;
+            }
         }
 
         #region Native Drawing 
